@@ -25,13 +25,13 @@ reuseable components
   padding: 5rem 2rem 0 2rem;
 }
 .btn {
-  border-radius: 5px;
-  padding: 15px 25px;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2.5rem;
   display: inline-block;
   text-decoration: none;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
 }
 .btn-primary {
   background: #dd0000;
@@ -45,7 +45,7 @@ hero section
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 3rem;
   align-items: center;
 }
 .hero-content {
@@ -91,7 +91,7 @@ Main Section
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 .btn-back {
   background-color: white;
@@ -101,9 +101,8 @@ Main Section
   width: 25.2rem;
   height: 6.4rem;
   text-align: center;
-  padding: 20px 25px;
+  padding: 2rem 2.5rem;
 }
-
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -116,7 +115,7 @@ Main Section
 .card {
   border: 1px solid #16161634;
   padding-bottom: 2rem;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 .card img {
   width: 100%;
@@ -124,19 +123,19 @@ Main Section
 .card a {
   text-decoration: none;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
   color: #161616;
   padding: 0.4rem 1.7rem;
   border: 1px solid #161616;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   display: inline-block;
   margin-top: 2rem;
 }
 .card h3 {
   font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
   padding: 2rem 0;
 }
 
@@ -171,8 +170,8 @@ Footer components
 }
 .footer h2 {
   font-weight: 600;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 4rem;
+  line-height: 6rem;
   text-align: center;
   color: white;
   padding: 5rem 0 4rem 0;
@@ -224,8 +223,9 @@ hr {
   margin: 1rem 1rem 3rem 1rem;
   cursor: pointer;
 }
+
 /* ---------------
-Media quaries
+Media quaries for mobile
 ------------------*/
 
 @media only screen and (max-width: 576px) {
@@ -236,6 +236,7 @@ Media quaries
     flex-direction: column;
     text-align: center;
   }
+
   .hero-content {
     padding-left: 0;
     padding-top: 15rem;
@@ -253,6 +254,7 @@ Media quaries
   }
   .btn-group a {
     border: 1px solid #16161634;
+    font-size: 2.2rem;
   }
   .cards {
     grid-template-columns: repeat(1, 1fr);
@@ -267,8 +269,28 @@ Media quaries
     text-align: center;
     gap: 1rem;
   }
+
+  /*--------------
+   font fixes
+   --------------- */
+  .hero-content p {
+    font-size: 2.3rem;
+  }
+  .card h3 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+  .info span {
+    font-size: 2.8rem;
+  }
+  .footer ul li a {
+    font-size: 2rem;
+  }
 }
 
+/* ---------------
+Media quaries for Tablets
+------------------*/
 @media only screen and (max-width: 768px) and (min-width: 577px) {
   .main {
     flex-direction: column;
@@ -296,5 +318,21 @@ Media quaries
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+  }
+  /*--------------
+   font fixes
+--------------- */
+  .hero-content p {
+    font-size: 2.3rem;
+  }
+  .card h3 {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  .info span {
+    font-size: 2.8rem;
+  }
+  .footer ul li a {
+    font-size: 2rem;
   }
 }
