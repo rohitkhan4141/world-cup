@@ -11,8 +11,7 @@ Reset defaults
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   font-family: "Poppins", sans-serif;
   font-size: 62.5%;
 }
@@ -23,12 +22,10 @@ reuseable components
 .wrapper {
   width: 132.1rem;
   margin: 0 auto;
-  padding: 5rem 5rem 0 5rem;
+  padding: 5rem 2rem 0 2rem;
 }
 .btn {
-  background: #dd0000;
   border-radius: 5px;
-  color: white;
   padding: 15px 25px;
   display: inline-block;
   text-decoration: none;
@@ -37,6 +34,8 @@ reuseable components
   line-height: 23px;
 }
 .btn-primary {
+  background: #dd0000;
+  color: white;
 }
 /* ---------------
 hero section
@@ -77,6 +76,90 @@ hero section
 }
 
 /* ---------------
+Main Section
+------------------*/
+.main {
+  display: flex;
+  margin-top: 10rem;
+  gap: 2rem;
+}
+.btn-group {
+  min-width: 31.2rem;
+  height: 31.2rem;
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+}
+.btn-back {
+  background-color: white;
+  color: #161616;
+}
+.btn-group a {
+  width: 25.2rem;
+  height: 6.4rem;
+  text-align: center;
+  padding: 20px 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.card-content {
+  padding-left: 2rem;
+}
+.card {
+  border: 1px solid #16161634;
+  padding-bottom: 2rem;
+  border-radius: 10px;
+}
+.card img {
+  width: 100%;
+}
+.card a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #161616;
+  padding: 0.4rem 1.7rem;
+  border: 1px solid #161616;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 2rem;
+}
+.card h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 2rem 0;
+}
+
+.card-info {
+  display: flex;
+  gap: 2rem;
+}
+.info {
+  display: flex;
+  align-items: center;
+}
+.info i {
+  font-size: 2rem;
+  color: red;
+}
+.info span {
+  font-size: 1.8rem;
+  padding-left: 1rem;
+}
+.btn-tablet {
+  display: none;
+}
+/* ---------------
 Media quaries
 ------------------*/
 
@@ -90,11 +173,48 @@ Media quaries
   }
   .hero-content {
     padding-left: 0;
-    padding-top: 20rem;
+    padding-top: 15rem;
     padding-bottom: 3rem;
   }
   .hero-image {
     padding-top: 1rem;
     padding-left: 5rem;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .btn-group {
+    background-color: white;
+  }
+  .btn-group a {
+    border: 1px solid #16161634;
+  }
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  .main {
+    flex-direction: column;
+  }
+  .btn-group {
+    background-color: white;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .btn-group a {
+    border: 1px solid #16161634;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .btn-tablet {
+    display: inline-block;
+    width: 25rem;
+    margin: 0 auto;
+    text-align: center !important;
+    margin-top: 2rem;
   }
 }
